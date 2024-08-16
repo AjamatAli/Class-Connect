@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    {%load static%}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REVIEWS</title>
+    {% include 'Class_app/common_files/common_css.html' %}
+    <style>
+        .flex-container{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-left: 25px;
+        }
+        .card-text{
+            font-size: 20px;
+            color: black;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .card{
+            border-radius: 15px;
+            filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+            transition: 2s;
+        }
+        .card:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="main-body">
+    {% include 'Class_app/common_files/common_header.html' %}
+    <h1 style="text-align: center; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">STUDENTS REVIEWS</h1>
+    <div class="flex-container  align-center">
+    {% for feedback in feedbacks %}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <p class="card-text">Rating: {{feedback.rating}}</p>
+            <p class="card-text">Email:  {{feedback.email}}</p>
+            <p class="card-text">Name: {{ feedback.name }}</p>
+        </div>
+      </div>
+    {%endfor%}
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    {% include 'Class_app/common_files/common_footer.html' %}
+</body>
+</html>

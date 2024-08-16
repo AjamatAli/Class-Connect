@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClassConnect | Member Feedback</title>
+    {% include 'Class_app/common_files/common_css.html' %}
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            margin-top: 45px;
+        }
+
+        .feedback-container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .feedback-header {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #4d0163;
+        }
+
+        .feedback-header h2 {
+            margin: 0;
+            font-size: 2rem;
+        }
+
+        .feedback-header h6 {
+            margin: 10px 0 0;
+            font-size: 1rem;
+            color: #6c757d;
+        }
+
+        .form-label {
+            font-weight: bold;
+            color: #4d0163;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .radio {
+            display: none;
+        } 
+        .radio ~ span {
+            font-size: 2.5rem;
+            filter: grayscale(100%);
+            cursor: pointer;
+            transition: 0.1s;
+        }
+
+        .radio:checked ~ span {
+            filter: grayscale(0%);
+            font-size: 3rem;
+        }
+
+        .form-control, .form-control:focus {
+            border: 2px solid #4d0163;
+            border-radius: 5px;
+            box-shadow: none;
+        }
+
+        .btn-custom {
+            width: 120px;
+            font-size: 1rem;
+        }
+
+        .btn-reset {
+            background-color: #ffc107;
+            border: none;
+        }
+
+        .btn-submit {
+            background-color: #28a745;
+            border: none;
+        }
+
+        @media (max-width: 768px) {
+            .feedback-container {
+                margin: 20px;
+                padding: 15px;
+            }
+
+            .radio-group {
+                flex-direction: column;
+            }
+
+            .radio-group span {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    {% include 'Class_app/student/stu_header.html' %} 
+    {% if messages %}
+    {% for m in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert" style="width:80%;margin: 20px auto;">
+        <strong>{{ m }}</strong> 
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+    {% endif %}
+
+    <div class="feedback-container">
+        <div class="feedback-header">
+            <h2>Member Feedback Form</h2>
+            <h6>Provide your feedback! It is valuable to us.</h6>
+        </div>
+        
+        <form method="post" action="/feedback/">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" id="name" placeholder="Enter name here" required>
+            </div>
+            
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" id="email" placeholder="Enter email here" required>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Rating</label>
+                <div class="radio-group">
+                    <label for="1">
+                        <input class="radio" type="radio" name="rating" id="1" value="⭐" required>
+                        <span>😒</span>
+                    </label>
+                    <label for="2">
+                        <input class="radio" type="radio" name="rating" id="2" value="⭐⭐">
+                        <span>🙁</span>
+                    </label>
+                    <label for="3">
+                        <input class="radio" type="radio" name="rating" id="3" value="⭐⭐⭐">
+                        <span>😐</span>
+                    </label>
+                    <label for="4">
+                        <input class="radio" type="radio" name="rating" id="4" value="⭐⭐⭐⭐">
+                        <span>😊</span>
+                    </label>
+                    <label for="5">
+                        <input class="radio" type="radio" name="rating" id="5" value="⭐⭐⭐⭐⭐">
+                        <span>😍</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label for="remarks" class="form-label">Your Remarks</label>
+                <textarea class="form-control" id="remarks" rows="3" name="review" placeholder="Your remarks" required></textarea>
+            </div>
+            
+            <div class="d-flex justify-content-center gap-3">
+                <button type="reset" class="btn btn-reset btn-custom">Reset</button>
+                <button type="submit" class="btn btn-submit btn-custom">Submit</button>
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

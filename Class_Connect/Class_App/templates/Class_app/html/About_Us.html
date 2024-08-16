@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+    <title>Educom - E-learning Platform</title>
+    {% include 'Class_app/common_files/common_css.html' %}
+    <style>
+        body {
+            font-family: "Trirong", serif;
+        }
+        .header {
+            background-image: url('https://img.freepik.com/free-vector/technology-device-eletronic-modern-gadget-cartoon_18591-52516.jpg?ga=GA1.1.1199564937.1717787362&semt=ais_hybrid');
+            padding: 60px 0;
+            text-align: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            
+        }
+        .header img {
+            max-width: 100%;
+        }
+        .features {
+            padding: 40px 0;
+            text-align: center;
+        }
+        .feature {
+            margin-bottom: 20px;
+        }
+        .programs {
+            background-color: #f9f9f9;
+            padding: 40px 0;
+        }
+        .program-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+        .program-card img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .cta {
+            background-color: #95c3f4;
+            color: #fff;
+            padding: 40px 0;
+            text-align: center;
+            font-family: "Trirong", serif;
+        }
+        .cta form input, .cta form button {
+            margin-top: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <div>  {% include 'Class_app/common_files/common_Header.html' %} </div>
+
+
+    <div >
+    <section >
+        <div class="header">
+            <h1>A New Way of Digital Literacy</h1>
+            <p>A solution for easy and flexible online learning, you can study anywhere through this platform</p>
+            <div style="border: #333;">
+              <a class="text-white fw-medium btn btn-dark"  href="/student_registration/">Register Now</a>
+             </div>
+            <div class="mt-3 " style="align-items: end;">
+                <!-- <img src="https://img.freepik.com/free-vector/ui-ux-designers-isometric-composition-with-small-people-creating-custom-design-web-site-3d-vector-illustration_1284-68939.jpg?size=626&ext=jpg&ga=GA1.1.1199564937.1717787362&semt=ais_hybrid" alt="Digital Literacy"> -->
+            </div>
+        </div>
+    </section>
+  </div>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>How it works</h2>
+            <div class="row mt-4">
+                <div class="col-md-3 feature">
+                    <h4>Set Your Plan</h4>
+                    <p>We always stay organized for what we want to teach people. It always good.</p>
+                </div>
+                <div class="col-md-3 feature">
+                    <h4>Find Your Course</h4>
+                    <p>We always stay organized for what we want to teach people. It always good.</p>
+                </div>
+                <div class="col-md-3 feature">
+                    <h4>Book Your Seat</h4>
+                    <p>We always stay organized for what we want to teach people. It always good.</p>
+                </div>
+                <div class="col-md-3 feature">
+                    <h4>Get Certificate</h4>
+                    <p>We always stay organized for what we want to teach people. It always good.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section class="programs">
+        <div class="container">
+            <h2 class="text-center">Our Latest Courses</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="program-card">
+                        <img src="https://img.freepik.com/free-vector/programmer-working-with-computer_23-2148232686.jpg?ga=GA1.1.1199564937.1717787362&semt=ais_hybrid">
+                        <h4>Core JAVA Coding Teaching from Beginner to Pro</h4>
+                        
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="program-card">
+                        <img src="https://img.freepik.com/free-vector/portrait-programmer-working-with-pc_23-2148222500.jpg?ga=GA1.1.1199564937.1717787362&semt=ais_hybrid" alt="Python Coding">
+                        <h4>Python Coding Teaching from Beginner to Pro</h4>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="program-card">
+                        <img src="https://img.freepik.com/free-vector/programmer-doing-his-job-flat-design_52683-14150.jpg?ga=GA1.1.1199564937.1717787362&semt=ais_hybrid" alt="Digital Marketing">
+                        <h4>Web Development Course from Beginner to Pro</h4>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>JOIN Us And Make Your career</h2>
+            <h1>Join Now And Study on India's Best E-Learning Platform</h1>
+        </div>
+    </section>
+
+   
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class_Connect</title>
+    {% include 'Class_app/common_files/common_css.html' %}
+    <style>
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      color: rgb(0, 0, 0);
+      padding: 20px;
+      box-sizing: border-box;
+    }
+        body {
+            font-family: 'Space Grotesk', 'Noto Sans', sans-serif;
+        }
+        .header {
+            border-bottom: 1px solid #EEEEEE;
+        }
+        .bg-cover {
+            background-size: cover !important;
+        }
+        .main-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+    }
+    .text-content {
+      max-width: 50%;
+      padding-right: 20px;
+    }
+    .text-content h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+      color: #383a2b;
+    }
+    .text-content p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 20px;
+      color: #4f5d75;
+    }
+    .text-content .learn-more {
+      display: inline-block;
+      padding: 10px 20px;
+      background: #4f5d75;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .image-content {
+      max-width: 50%;
+    }
+    .image-content img {
+      width: 100%;
+    }
+    .mentor-card {
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            text-decoration: none; 
+            color: inherit; 
+        }
+        .mentor-card:hover {
+            transform: scale(1.05);
+        }
+        .mentor-img {
+            height: 180px;
+            object-fit: cover;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .mentor-name {
+            font-size: 1.25rem;
+            font-weight: bold;
+        }
+        .mentor-course {
+            color: #6c757d;
+        }
+        .card-body {
+            padding: 1.25rem;
+        }
+    </style>
+</head>
+<body>
+    {% include 'Class_app/common_files/common_Header.html' %}
+    <div class="d-flex flex-column min-vh-100 bg-white overflow-hidden">
+        <div class="container-fluid">
+        <div class="container d-flex flex-grow-1 justify-content-center py-5">
+            <div class="d-flex flex-column max-w-960 flex-1">
+                <div class="main-content">
+                    <div class="text-content">
+                      <h1>Streamlining Education with ClassConnect</h1>
+                      <p>Welcome to ClassConnect, your gateway to high-quality online education. 
+                        We offer diverse courses to enhance your skills, gain new knowledge, or pursue
+                         your passions, all from the comfort of your home. Managing an online learning 
+                         platform involves promoting courses, streamlining admissions, handling course materials, 
+                         issuing certificates, and managing schedules and faculty. ClassConnect addresses these issues
+                          by automating processes, ensuring a smooth experience for students and the company. Users can easily browse 
+                          courses and enroll online, receiving a unique ID and password for portal access. The portal allows you to access materials, 
+                          participate in discussions, track progress, and receive certificates, making learning easy, efficient, and enjoyable..</p>
+                      <a href="/about/" class="learn-more">Learn more</a>
+                    </div>
+                    <div class="image-content">
+                      <img src="https://img.freepik.com/free-vector/e-learning-interactions-illustration-concept_114360-23713.jpg?size=626&ext=jpg&ga=GA1.1.1199564937.1717787362&semt=ais_hybrid" alt="Online Education">
+                    </div>
+                  </div>
+              
+                </div>
+                <div class="d-flex flex-column gap-4 px-3 py-5">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h2 class="fw-bold">Explore our top Courses</h2>
+                        <a class="btn btn-dark" href="/course/">See all</a>
+                    </div>
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-img-top bg-cover bg-center" style="background-image: url('https://img.freepik.com/free-vector/process-optimization-concept-illustration_114360-23833.jpg?ga=GA1.1.1199564937.1717787362&semt=ais_hybrid'); height: 180px;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Data Science</h5>
+                                    <p class="card-text">Learn to analyze and interpret complex data to drive decision-making.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-img-top bg-cover bg-center" style="background-image: url('https://img.freepik.com/free-vector/web-development-concept-website-optimization-web-page-interface-design-coding-testing-site-internet-modern-technology-idea-isolated-flat-vector-illustration_613284-2551.jpg?ga=GA1.1.1199564937.1717787362&semt=ais_hybrid'); height: 180px;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Web Development</h5>
+                                    <p class="card-text">Build and design stunning websites and web applications.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100">
+                                <div class="card-img-top bg-cover bg-center" style="background-image: url('https://qualifyed.in/store/1/default_images/courses/thumbnail/core-java.webp'); height: 180px;"></div>
+                                <div class="card-body">
+                                    <h5 class="card-title">Core JAVA</h5>
+                                    <p class="card-text">Master the art of online Core Java Programming and grow your knowledge.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-flex flex-column align-items-center gap-4 bg-light rounded p-5">
+                        <div class="text-center">
+                            <h2 class="fw-bold">Our Mentors</h2>
+                            <p>Meet our expert mentors who are here to guide you through your learning journey.</p>
+                        </div>
+                        <div class="container">
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                                
+                                <div class="col">
+                                    <a href="#" class="mentor-card h-100 d-block">
+                                        <div class="card">
+                                            <img src="{%static 'Class_app/images/k.jpg'%}" class="card-img-top mentor-img" alt="Mentor 1">
+                                            <div class="card-body">
+                                                <h5 class="mentor-name">Mis Kaushiki Gupta</h5>
+                                                <p class="mentor-course">Web Development</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                               
+                                <div class="col">
+                                    <a href="#" class="mentor-card h-100 d-block">
+                                        <div class="card">
+                                            <img src="{%static 'Class_app/images/dhruv.jpg'%}" class="card-img-top mentor-img" alt="Mentor 2">
+                                            <div class="card-body">
+                                                <h5 class="mentor-name">Mr. Dhruv Gupta</h5>
+                                                <p class="mentor-course">Data Science</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="col">
+                                    <a href="#" class="mentor-card h-100 d-block">
+                                        <div class="card">
+                                            <img src="{%static 'Class_app/images/sumit.jpg'%}" class="card-img-top mentor-img" alt="Mentor 3">
+                                            <div class="card-body">
+                                                <h5 class="mentor-name">Mr.Sumit Maurya</h5>
+                                                <p class="mentor-course">Digital Marketing</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="col">
+                                    <a href="#" class="mentor-card h-100 d-block">
+                                        <div class="card">
+                                            <img src="{%static 'Class_app/images/akthar.jpg'%}" class="card-img-top mentor-img" alt="Mentor 4">
+                                            <div class="card-body">
+                                                <h5 class="mentor-name">Dr. Aktahr Ali</h5>
+                                                <p class="mentor-course">Machine Learning</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                
+                                <div class="col">
+                                    <a href="#" class="mentor-card h-100 d-block">
+                                        <div class="card">
+                                            <img src="{%static 'Class_app/images/ratan.jpg'%}" class="card-img-top mentor-img" alt="Mentor 5">
+                                            <div class="card-body">
+                                                <h5 class="mentor-name">Mr. Ratan Gupta</h5>
+                                                <p class="mentor-course">Artificial Intelligence</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            
+                                <div class="col">
+                                    <a href="#" class="mentor-card h-100 d-block">
+                                        <div class="card">
+                                            <img src="{%static 'Class_app/images/Vishal.jpg'%}" class="card-img-top mentor-img" alt="Mentor 6">
+                                            <div class="card-body">
+                                                <h5 class="mentor-name">Mr. Vishal Prajapati </h5>
+                                                <p class="mentor-course">Cybersecurity</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>=/e
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <section class="notice-section" id="notices">
+        <div class="container ">
+            <h3>Important Notices</h3>
+            <div class="notice-content">
+                <div class="marquee-content">
+                    <marquee direction="up" scrollamount="1" onmouseover="this.stop()" onmouseout="this.start()">
+                        <ul>
+                            {% for n in notice_key %}
+                            <li>
+                                {{ n.notice_date }}: {{ n.notice_content }}
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </marquee>
+                </div>
+            </div>
+        </div>
+    </section> -->
+</div>
+         
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    {%include 'Class_app/common_files/common_footer.html' %}      
+
+</body>
+</html>
